@@ -43,8 +43,8 @@ This project is deployed at https://spectacular-baklava-72024e.netlify.app/. You
 - Contributing
 - Contributions are welcome! Please feel free to submit a pull request or open an issue.
 
-##License
+## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
-##Contact
+## Contact
 For any inquiries, please contact Your Name.
