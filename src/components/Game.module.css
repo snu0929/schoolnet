@@ -1,0 +1,392 @@
+/* game.module.css */
+
+/* Container Styling */
+.gameContainer {
+    background: linear-gradient(to right, #59acff, #ffffff); /* Gradient background */
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    max-width: 550px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Heading Styling */
+  .heading {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-weight: 800;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Button Styling */
+
+  .choiceContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .choiceItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  /* Heading above each image */
+  .choiceHeading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  /* Choice Image Styling */
+.choiceImage {
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    border-radius: 50%;
+   
+  }
+  
+  /* Choice Image Hover Effect */
+  .choiceImage:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out; /* Add fade-in animation */
+  }
+  .choiceDisplay {
+    height: auto;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    background-color: #f0f0f0; /* Light grey background */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .choiceIcon {
+    width: 50px; /* Adjust the size as needed */
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #007BFF; /* Border to highlight the images */
+  }
+  
+  .choiceDisplay p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #262525; /* Darker text color for contrast */
+  }
+  .winResult {
+    color: #27ae60;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: bounceIn 0.5s ease-in-out;
+  }
+  
+  .loseResult {
+    color: #e74c3c;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  .drawResult {
+    color: #f39c12;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  .result {
+    margin-top: 20px;
+    padding: 15px;
+    background: linear-gradient(135deg, #06210d, #0277bd);
+    background-size: 200% 200%;
+    color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: gradientShift 5s ease infinite;
+  }
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .result p {
+    font-size: 30px; /* Larger text size for emphasis */
+    margin: 5px 0;
+  }
+  
+  /* Button Hover Effect */
+  .button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+  }
+  
+  /* Keyframes for Fade-In Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Scoreboard Styling */
+  /* Scoreboard Styling */
+.scoreboard {
+    margin: 30px 0;
+    padding: 25px;
+    background: #160606;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border: 2px solid #0d2e43;
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+    animation: fadeInUp 0.5s ease-in-out;
+  }
+  
+  .scoreboardHeading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #30475c;
+    font-weight: 800;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+  }
+  
+  .scoreboardItems {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .scoreboardItem {
+    flex: 1;
+    padding: 10px;
+    background: #3498db;
+    color: #ffffff;
+    border-radius: 12px;
+    margin: 0 10px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: popIn 0.5s ease-in-out;
+  }
+  
+  .scoreboardItem:nth-child(2) {
+    background: #e74c3c;
+  }
+  
+  .scoreboardItem:last-child {
+    background: #f39c12;
+  }
+  
+  .scoreboardItem:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .scoreboardLabel {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #150404;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    background-color: rgb(222, 216, 216);
+    border-radius: 6px;
+  }
+  
+  .scoreboardValue {
+    font-size: 2.9rem;
+    font-weight: 1000;
+    margin-top: 5px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes popIn {
+    from {
+      transform: scale(0.9);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .scoreboardHeading {
+      font-size: 2rem;
+    }
+  
+    .scoreboardItems {
+      flex-direction: column;
+    }
+  
+    .scoreboardItem {
+      margin: 10px 0;
+    }
+  
+    .scoreboardLabel {
+      font-size: 1.25rem;
+    }
+  
+    .scoreboardValue {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .scoreboardHeading {
+      font-size: 1.5rem;
+    }
+  
+    .scoreboardLabel {
+      font-size: 1rem;
+    }
+  
+    .scoreboardValue {
+      font-size: 2rem;
+    }
+  }
+  
+  
+  /* Result Styling */
+  
+  
+  /* Restart Button Styling */
+  .restartButton {
+    background-color: #27ae60;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .restartButton:hover {
+    background-color: #229954;
+    transform: scale(1.05);
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* Tablets and Small Devices (up to 768px) */
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 2rem;
+    }
+    .choiceImage {
+        width: 80px;
+        height: 80px;
+      }
+    .button {
+      padding: 12px 25px;
+      font-size: 16px;
+    }
+  
+    .scoreboardHeading {
+      font-size: 1.5rem;
+    }
+  
+    .scoreboardItems {
+      flex-direction: column;
+    }
+  
+    .scoreboardItem {
+      margin: 10px 0;
+    }
+  }
+  
+  /* Mobile Devices (up to 480px) */
+  @media (max-width: 480px) {
+    .gameContainer {
+      padding: 20px;
+      justify-content: center;
+      
+    }
+    .choiceImage {
+        width: 50px;
+        height: 50px;
+      }
+  
+    .heading {
+      font-size: 1.5rem;
+    }
+  
+    .button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  
+    .scoreboardHeading {
+      font-size: 1.25rem;
+    }
+  
+    .scoreboardItems {
+      flex-direction: column;
+    }
+  
+    .scoreboardItem {
+      margin: 10px 0;
+      font-size: 14px;
+    }
+  }
+  
+
+ 

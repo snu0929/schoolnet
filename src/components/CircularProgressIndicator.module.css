@@ -1,0 +1,41 @@
+/* CircularProgressIndicator.module.css */
+
+.container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: auto; /* Center the progress indicator */
+    background: radial-gradient(circle, #ffffff 60%, #e0f2f1 100%); /* Soft background */
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .circularProgress {
+    transform: rotate(-90deg);
+    overflow: visible;
+  }
+  
+  .backgroundCircle {
+    fill: none;
+    stroke: #e0f2f1; /* Light teal for background circle */
+    stroke-width: 10; /* Adjust stroke width for better visibility */
+  }
+  
+  .progressCircle {
+    fill: none;
+    stroke: #00796b; /* Dark teal for progress */
+    stroke-width: 10; /* Same stroke width as background for consistency */
+    transition: stroke-dashoffset 0.3s ease;
+    stroke-linecap: round; /* Rounded end for smooth effect */
+  }
+  
+  .percentageText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00796b; /* Color matching the progress circle */
+  }
+  

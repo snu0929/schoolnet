@@ -1,0 +1,129 @@
+:root {
+  /* Light Theme Colors */
+  --background-color: #f0f4f8;
+  --text-color: #333;
+  --primary-color: #00796b;
+  --secondary-color: #ffffff;
+  --box-shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] {
+  /* Dark Theme Colors */
+  --background-color: #1a1a2e;
+  --text-color: #f0f4f8;
+  --primary-color: #0f4c75;
+  --secondary-color: #162447;
+  --box-shadow-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styling */
+.app-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px var(--box-shadow-color);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Main Content Styling */
+.app-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px;
+  width: auto;
+}
+
+.horizontal-layout {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.game-section,
+.pomodoro-section {
+  flex: 1 1 45%;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--box-shadow-color);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.game-section:hover,
+.pomodoro-section:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer Styling */
+.app-footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 -4px 8px var(--box-shadow-color);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .horizontal-layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .game-section,
+  .pomodoro-section {
+    max-width: 100%;
+  }
+}
+/* Theme Toggle Button */
+.theme-toggle-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.theme-toggle-button:hover {
+  background-color: #004d40; /* Darker shade for hover */
+  transform: scale(1.05);
+}
+
+.theme-toggle-button:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
